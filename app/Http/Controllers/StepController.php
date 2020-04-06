@@ -10,7 +10,16 @@ class StepController extends Controller
     public function show(Request $request)
     {
         $form_data = $request->query();
-        $steps = Step::where('product_id',$form_data['product-id'])->get();
-        return view('step');
+        $sort = $form_data['sort'];
+        $steps_count = Step::where('product_id', $form_data['product-id'])->count();
+        $step = Step::where([
+            'product_id' => $form_data['product-id'],
+            'sort' => $sort,
+        ])->first();
+        $vars = explode(',', $step->vars);
+        $lan = $form_data['lan'] === 'cn' ? 'zh-CN' : $form_data['lan'];
+        $cur_product_name = $form_data['product'];
+        $install_tip = trans('nas.1', [], $lan);
+        return view('step.index' . $sort, compact('steps_count', 'vars', 'cur_product_name', 'install_tip', 'lan', 'sort'));
     }
 }

@@ -11,10 +11,13 @@
 |
 */
 
-
 Route::get('/test', function () {
+    $str = '/steps?product-id=1&product=D2-310&lan=cn&sort=1';
+    dd(substr_replace($str, '=xxx', strrpos($str, '=')));
+    dd(substr_replace($_SERVER['REQUEST_URI'], '=xxx', strrpos($_SERVER['REQUEST_URI'], '=')));
+//    str_replace();
 //    dd(trans('common.start', [], 'en'));
-    dd(trans('nas.1', [], 'en'));
+//    dd(trans('nas.1', [], 'en'));
 });
 
 Route::prefix(env('ADMIN_PRE'))->name('admin.')->namespace('Admin')->middleware('auth:admin')->group(function () {
@@ -34,5 +37,7 @@ Route::get('/steps', 'StepController@show');
 Route::any('{all}', function () {
     return view('layouts.master');
 })->where(['all' => '.*']);
+
+
 
 

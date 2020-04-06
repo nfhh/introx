@@ -234,7 +234,7 @@
         },
         methods: {
             handleClick() {
-                location.href = `/steps?product-id=${this.curProductId}&lan=${this.selected_lan}`
+                location.href = `/steps?product-id=${this.curProductId}&product=${this.curProductName}&lan=${this.selected_lan}&sort=1`
             },
             goToStep(step) {
                 if (step < 0 || step > this.steps.length - 1) {
