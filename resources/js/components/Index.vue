@@ -67,6 +67,7 @@
 </template>
 
 <script>
+    import internalIp from 'internal-ip'
     export default {
         data() {
             return {
@@ -234,6 +235,7 @@
         },
         methods: {
             handleClick() {
+                console.log(internalIp.v4.sync())
                 location.href = `/steps?product-id=${this.curProductId}&product=${this.curProductName}&lan=${this.selected_lan}&sort=1`
             },
             goToStep(step) {
