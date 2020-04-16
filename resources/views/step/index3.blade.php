@@ -4,6 +4,9 @@
     <div class="content">
         <div class="box">
             <h1>{{ trans('nas.'.$vars[0], [], $lan) }}</h1>
+            @if($img)
+                <img src="{{ asset($img)}}">
+            @endif
             <table border="1">
                 <tbody>
                 <tr>

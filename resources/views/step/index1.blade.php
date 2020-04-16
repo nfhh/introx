@@ -11,7 +11,7 @@
                 @endif
             @endforeach
             @if($img)
-                <img src="{{ $img }}" alt="">
+                <img src="{{ $img }}">
             @endif
         </div>
     </div>
