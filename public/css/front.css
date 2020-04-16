@@ -78,6 +78,10 @@ article .two {
     overflow: hidden;
 }
 
+article .two .box .yi {
+
+}
+
 article .two img {
     max-width: 100%;
 }
@@ -123,6 +127,15 @@ article .two .bottom button {
 article .two .content .box {
     margin: 0 auto;
     width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+article .two .content .box .er{
+    height: 100%;
+    display: flex;
 }
 
 article .two .content .box .list-group li {
@@ -156,6 +169,7 @@ article .two .content .box img {
     display: block;
     padding: 30px 0;
     margin: 0 auto;
+    align-self: center;
 }
 
 table {

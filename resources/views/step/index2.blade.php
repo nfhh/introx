@@ -3,7 +3,7 @@
 @section('content')
     <div class="content">
         <div class="box">
-            <h1>{{ trans('nas.'.$vars[0], [], $lan) }}</h1>
+            <p>{{ trans('nas.'.$vars[0], [], $lan) }}</p>
             @if($img)
                 <img src="{{ asset($img)}}">
             @endif
