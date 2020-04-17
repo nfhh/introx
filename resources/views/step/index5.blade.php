@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="content">
-        <div class="box">
-            <div class="yi">
+    <div class="twoxx">
+        <div class="wrap">
+            <div class="box1 text-center">
                 @foreach($vars as $k=>$v)
                     <p> {{ trans('nas.'.$v, [], $lan) }}</p>
                 @endforeach
             </div>
-            <div class="er">
+            <div class="box4">
                 @if($img)
                     <img src="{{ $img }}">
                 @endif
@@ -16,3 +16,4 @@
         </div>
     </div>
 @endsection
+

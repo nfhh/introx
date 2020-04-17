@@ -3,13 +3,17 @@
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 main {
     display: flex;
     height: 100vh;
 }
 
 main nav {
-    width: 480px;
+    width: 400px;
     background-color: #cdcdcd;
     padding-right: 80px;
     justify-content: space-between;
@@ -25,6 +29,29 @@ main article {
     padding-left: 68px;
 }
 
+.inline-box {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+    line-height: 30px;
+}
+
+.inline-box .first {
+    width: 50%;
+}
+
+.inline-box .second {
+    flex: 1;
+}
+
+.hrb {
+    border-bottom: 1px solid #F6F6F6;
+}
+
+.hrtb {
+    border-top: 1px solid #F6F6F6;
+}
 
 nav .one {
     align-self: flex-end;
@@ -60,6 +87,25 @@ article .one .right select {
     padding: 8px 16px;
 }
 
+article .twox {
+    overflow: hidden;
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+article .wrap {
+    width: 800px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.box3 {
+    padding-bottom: 20px;
+}
+
 article .one .left {
     width: 120px;
     display: flex;
@@ -78,23 +124,31 @@ article .two {
     overflow: hidden;
 }
 
-article .two .box .yi {
-
+article .twoxxx {
+    padding-top: 30px;
+    overflow: hidden;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
-article .two img {
-    max-width: 100%;
+article .twoxx {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 article .two .content {
     overflow-y: auto;
-    height: calc(100vh - 45px);
     padding-right: 20px;
     padding-bottom: 20px;
 }
 
 article .two .top .inside1 h1 {
     font-size: 36px;
+    text-align: unset;
 }
 
 article .two .top .inside2 {
@@ -129,11 +183,10 @@ article .two .content .box {
     width: 800px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 100%;
 }
 
-article .two .content .box .er{
+article .two .content .box .er {
     height: 100%;
     display: flex;
 }
@@ -145,7 +198,7 @@ article .two .content .box .list-group li {
     padding: 14px 0 4px;
 }
 
-article .two .content .box h1 {
+article h1 {
     padding-bottom: 20px;
     text-align: center;
 }
@@ -153,6 +206,13 @@ article .two .content .box h1 {
 article .two .content .box p {
     line-height: 30px;
     text-indent: 2em;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 0;
 }
 
 article .two .content .box a {
@@ -219,4 +279,23 @@ table tr:last-child td {
 
 .mt-6 {
     margin-top: 60px;
+}
+
+.box4 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.box5 {
+    margin: 0 auto;
+    width: 800px;
+}
+
+.box1 p, .box5 p, .box6 p {
+    line-height: 30px;
+}
+
+.text-center {
+    text-align: center;
 }

@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="content">
-        <div class="box">
-            <h1>{{ trans('nas.'.$vars[0], [], $lan) }}</h1>
+    <div class="twoxxx">
+        <h1>{{ trans('nas.'.$vars[0], [], $lan) }}</h1>
+        <div class="box5">
             <strong>{{ trans('nas.'.$vars[1], [], $lan) }}</strong>
             <p>{{ trans('nas.'.$vars[2], [], $lan) }}</p>
             <p>{{ trans('nas.'.$vars[3], [], $lan) }}</p>
@@ -27,3 +27,4 @@
         </div>
     </div>
 @endsection
+

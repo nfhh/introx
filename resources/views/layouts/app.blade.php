@@ -40,9 +40,7 @@
 
                 </div>
             </div>
-            <div class="two">
-                @yield('content')
-            </div>
+            @yield('content')
         </article>
     </div>
 </main>
